@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			img{
+				width: 220px;
+				height: 300px;
+				display: block;
+				margin: 0 auto;		
+				/* 从原色到变灰之间的一个3s过度 */
+				 transition: all 3s;  
+				 float: left;
+				
+			}
+			/* 鼠标移上去后灭有滤镜效果 */
+			img:hover{
+				-webkit-filter: none;
+			}
+			.img1{
+				/* 滤镜属性：灰度
+				 grayscale:设置灰度，1是百分之百（灰），0是百分之零（原色）
+				 */	
+				-webkit-filter: grayscale(1);
+				
+			}
+			.img2{
+				/* 滤镜属性：亮度
+				 brightness:默认值为1，0表示全黑（最暗）,2则更亮（数字越大，曝光度越高）
+				 */
+				-webkit-filter: brightness(2);
+			}
+			.img3{
+				/* 滤镜属性：褐色
+				 sepia:1： 百分百褐色 0：正常
+				 */
+				-webkit-filter: sepia(1);
+			}
+			.img4{
+				/* 滤镜属性：模糊度
+				blur:单位为像素
+				 */
+				-webkit-filter: blur(5px);
+			}
+			.img5{
+				/* 滤镜属性：对比度
+				contrast: 0：一片灰 1：正常（数字越大，对比越来越明显，黑的更黑，白的更白）
+				 */
+				-webkit-filter: contrast(2);
+			}
+			.img6{
+				/* 滤镜属性：饱和度
+				saturate: 1：默认值（数字越大，饱和度越高）
+				 */
+				-webkit-filter: saturate(2);
+			}
+			.img7{
+				/* 滤镜属性：色相
+				invert: 胶片底色的效果
+				 */
+				-webkit-filter:invert();
+			}
+			.img8{
+				/* 滤镜属性：色相旋转
+				hue-rotate: 0-360°
+				 */
+				-webkit-filter:hue-rotate(30deg);
+			}
+			/* 同时使用多个滤镜属性(中间用空格隔开)，使图片像素描样一点点画出来 */
+			.img9{
+				
+				-webkit-filter:blur(10px) brightness(20) grayscale(1);
+				transition: all 15s; 
+			}
+			.img9:hover{
+			
+				-webkit-filter:blur(0px) brightness(1) grayscale(1);
+			}
+		</style>
+	<body>
+		<img class="img1" src="../img/rumeng.png" >
+		<img class="img2" src="../img/rumeng.png" > 
+		<img class="img3" src="../img/rumeng.png" > 
+		<img class="img4" src="../img/rumeng.png" > 
+		<img class="img5" src="../img/rumeng.png" > 
+		<img class="img6" src="../img/rumeng.png" > 
+		<img class="img7" src="../img/rumeng.png" > 
+		<img class="img8" src="../img/rumeng.png" > 
+		<img class="img9" src="../img/rumeng.png" > 
+	</body>
+</html>
